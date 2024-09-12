@@ -1,6 +1,7 @@
-class Persona implements Alumno{}
-interface Alumno    {}
+class Persona {}
+class Alumno  extends Persona  {}
 
+interface KK {}
 public class Main {
 
     static void imprimirJerarquiaDeClasses(Class<?> c) {
@@ -11,8 +12,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-            Alumno pastorBelga = new Alumno(){};
+        Alumno pastorBelga = new Alumno(){};
 
         imprimirJerarquiaDeClasses(pastorBelga.getClass());
+
+        KK kk = new KK(){};
+        imprimirJerarquiaDeClasses(kk.getClass());
     }
 }
